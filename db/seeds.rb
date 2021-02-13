@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
+5.times do
   Task.create(
     title: Faker::Hacker.verb,
     details: Faker::Hacker.say_something_smart,
-    completed: Faker::Boolean.boolean
+    completed: [true, false].sample
   )
 end
