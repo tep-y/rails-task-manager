@@ -5,3 +5,5 @@
   <li><input id="task" name="task" type="checkbox" value="1" /><%= link_to task.title, task_path(task.id) %></li>
 <% end %>
 </ul>
+
+<p><%= link_to "Add a new task", tasks_new_path %></p>
