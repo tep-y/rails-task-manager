@@ -1,0 +1,9 @@
+<h1><%= @task.title.capitalize %></h1>
+
+<div class="details">
+<%= @task.details %>
+</div>
+
+<input id="details" name="details" type="checkbox" value="1" />This task is complete</input>
+
+<p><%= link_to "Back to list", tasks_path %></p>
