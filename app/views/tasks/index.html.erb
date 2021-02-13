@@ -2,8 +2,17 @@
 
 <ul>
 <% @tasks.each do |task| %>
-  <li><input id="task" name="task" type="checkbox" value="1" /><%= link_to task.title, task_path(task.id) %></li>
+  <li>
+    <%= form_for(task) do |t| %>
+    <%= t.check_box :completed %>
+    <%= link_to task.title, task_path(task.id) %>
+    </li>
+    <% end %>
 <% end %>
 </ul>
 
 <p><%= link_to "Add a new task", tasks_new_path %></p>
+
+
+
+

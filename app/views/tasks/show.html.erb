@@ -4,6 +4,12 @@
 <%= @task.details %>
 </div>
 
-<input id="details" name="details" type="checkbox" value="1" />This task is complete</input>
+<%= form_for(@task) do |t| %>
+  <%= t.check_box :completed %>
+This task is complete</input>
+<% end %>
 
-<p><%= link_to "Back to list", tasks_path %></p>
+<p><%= link_to "Edit Task", task_edit_path(@task.id) %>
+<%= link_to "Delete", task_destroy_path(@task.id), method: :delete %>
+<%= link_to "Back to list", tasks_path %></p>
+
