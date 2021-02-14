@@ -1,14 +1,94 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  padding-top: 16px;
+  background-color: #e4f9ff;
+}
+
 ul {
-    list-style-type: none;
-    padding-inline-start: 0px;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.container {
+  width: 48%;
+  margin: auto;
+  background-color: #FFFFFF;
+  padding: 24px;
 }
 
 .details {
-  width: 40%;
-  background-color: yellow;
-  padding: 20px;
-  margin-bottom: 20px;
+  width: 50%;
+  background-color: #12cad6;
+  padding: 18px;
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
+
+.main-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-menu {
+  font-size: 14px;
+  text-align: center;
+}
+
+input[type=text], select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: grid;
+  border: 1px solid red;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  width: 24%;
+  background-color: red;
+  display: grid;
+  color: white;
+  padding: 12px 20px;
+  margin: 24px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 4px solid red;
+}
+
+input[type=submit]:hover {
+  border: 4px solid #0fabbc;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+i {
+  margin-right: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: red;
 }

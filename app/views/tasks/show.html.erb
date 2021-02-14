@@ -1,15 +1,23 @@
-<h1><%= @task.title.capitalize %></h1>
-
-<div class="details">
-<%= @task.details %>
+<div class="main-bar">
+  <h1><%= @task.title.capitalize %></h1>
+    <% if @task.completed == true %>
+        <h4><i class="fa fa-check-circle" aria-hidden="true"></i>
+        This task is complete.</h4>
+      <% else %>
+        <h4><i class="fa fa-circle-o" aria-hidden="true"></i>
+        This task is not complete.</h4>
+    <% end %>
 </div>
 
-<%= form_for(@task) do |t| %>
-  <%= t.check_box :completed %>
-This task is complete</input>
-<% end %>
+<div class="details">
+  <%= @task.details %>
+</div>
 
-<p><%= link_to "Edit Task", task_edit_path(@task.id) %>
-<%= link_to "Delete", task_destroy_path(@task.id), method: :delete %>
-<%= link_to "Back to list", tasks_path %></p>
+
+
+<p class="show-menu">
+  <%= link_to "Edit Task", edit_task_path(@task.id) %>
+  |
+  <%= link_to "Back to list", tasks_path %>
+</p>
 
