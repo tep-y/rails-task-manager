@@ -1,17 +1,16 @@
 <%= form_for(@task) do |t| %>
-  <div class="form">
     <%= t.label :title %>
     <%= t.text_field :title %>
 
     <%= t.label :details %>
-    <%= t.text_field :details %>
+    <%= t.text_area :details, :rows => 4 %>
 
     <%= t.label :completed %>
     <%= t.check_box :completed %>
 
-  <%= t.submit %>
+    <%= t.submit %>
 <% end %>
-  </div>
+
 
 <p class="show-menu">
   <%= link_to "Back to list", tasks_path %>

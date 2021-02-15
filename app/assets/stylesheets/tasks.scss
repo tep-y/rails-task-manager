@@ -39,6 +39,19 @@ ul {
   text-align: center;
 }
 
+textarea {
+  font-family: 'Open Sans', sans-serif;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: grid;
+  border: 1px solid red;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
+}
+
 input[type=text], select {
   width: 60%;
   padding: 12px 20px;
